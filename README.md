@@ -10,4 +10,8 @@ This project is to manage the EC2 instance snapshots in an AWS account.
 Configure the AWS account here for an example as myprofile.
 
 ## Running
-`pipenv run "python Scripts/Snapshots.py"`
+`pipenv run "python Scripts/Snapshots.py <command> <--project=PROJECT"`
+
+*command* is list , start or stop
+
+*project* is optional and your project tag name :) 
