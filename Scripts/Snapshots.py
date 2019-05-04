@@ -70,3 +70,6 @@ def start_instances(project):
 
 if __name__ == "__main__":
     instances()
+
+
+# Adding a comment : Resuming the course 11:25 am 4/5/19
