@@ -31,7 +31,7 @@ def snapshots():
     help="Only snapshots for the Project (tag Project:<name>)")
 @click.option('--all', 'list_all', default=False, is_flag=True,
     help = "List all snapshots for each volume inclusding existing/old ones")
-def list_snapshots(project):
+def list_snapshots(project, list_all):
     "List EC2 Snapshots"
 
     instances = filter_instances(project)
@@ -48,7 +48,7 @@ def list_snapshots(project):
                     s.start_time.strftime("%c")
                 )))
 
-                if s.state == 'completed': break
+                if s.state == 'completed' and not list_all: break
     return
 
 cli.group('volumes')
